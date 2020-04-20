@@ -4,6 +4,10 @@ public class Var implements Command{
     String name;
     Double value;
 
+    public Var(){
+
+    }
+
     public Var(String Name, Double Value){
         name = Name;
         value = Value;

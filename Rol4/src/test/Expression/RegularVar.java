@@ -10,13 +10,11 @@ public class RegularVar extends Var {
 
 	@Override
 	public double calculate() {
-		// TODO Auto-generated method stub
 		return val;
 	}
 
 	@Override
 	public void set(double val) {
-		// TODO Auto-generated method stub
 		this.val = val;
 	}
 
