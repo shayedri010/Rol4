@@ -1,10 +1,13 @@
 package test;
 
+import test.Commands.Command;
+
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class OurInterpreter {
 
-    String [] simVars1 = {
+/*    String [] simVars1 = {
            "/instrumentation/airspeed-indicator/indicated-speed-kt",
            "/instrumentation/altimeter/indicated-altitude-ft",
            "/instrumentation/altimeter/pressure-alt-ft",
@@ -28,15 +31,23 @@ public class OurInterpreter {
            "/controls/flight/flaps",
            "/controls/engines/engine/throttle",
            "/engines/engine/rpm"
-    };
-
-    DataBase localDB;
+    };*/
+    Lexer lexer;
+    Parser parser;
+    static ConcurrentHashMap<String, Double> simTable = new ConcurrentHashMap<String, Double>();
 
     public OurInterpreter(){
-      localDB = new DataBase();
+        Lexer lexer = new Lexer();
+        Parser parser = new Parser();
     }
 
-    public DataBase getLocalDB(){
-        return  localDB;
+    public Double getVarValue(String key){
+        Double val =simTable.get(key);
+        return val;
     }
+
+    public static ConcurrentHashMap<String,Double> getSimTable(){
+        return simTable;
+    }
+
 }

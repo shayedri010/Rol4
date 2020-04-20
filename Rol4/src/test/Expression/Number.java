@@ -10,7 +10,6 @@ public class Number implements Expression {
 
 	@Override
 	public double calculate() {
-		// TODO Auto-generated method stub
 		return val;
 	}
 
