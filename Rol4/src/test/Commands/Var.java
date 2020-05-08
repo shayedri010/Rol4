@@ -1,6 +1,7 @@
 package test.Commands;
 
-public class Var implements Command{
+public class Var implements Command
+{
     String name;
     Double value;
 
