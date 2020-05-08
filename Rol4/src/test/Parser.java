@@ -7,6 +7,7 @@ import java.util.HashMap;
 public class Parser {
     HashMap<String, Command> commandList;
 
+    
     public Parser(){
         commandList = new HashMap<>();
         initialCommandList();

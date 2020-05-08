@@ -1,9 +1,13 @@
 package test.Commands;
 
+import test.Expression.Calculator;
+import test.OurInterpreter;
+
 public class Bind implements Command{
 
-    @Override
-    public void doCommand(String[] variables) {
 
+    public void doCommand(String[] variables)
+    {
+        OurInterpreter.getBindTable().put(variables[0],variables[1]);
     }
 }

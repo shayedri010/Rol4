@@ -1,21 +1,15 @@
 package test.Commands;
 
-import test.DataBase;
+import test.Expression.Calculator;
+import test.OurInterpreter;
 
 public class Assign implements Command{
-    //Var left,right;
-//
-    //public Assign(Var Left, Var Right){
-    //    left = Left;
-    //    right = Right;
-    //}
 
-    public void doCommand(String[] variables){
-       DataBase db = DataBase.getDbInstance();
-       //Check for maximum 3 parameters
-       if (variables.length != 2 ) {
-           //Var left = new Var(variables[0]);
-       }
+
+    public void doCommand(String[] variables)
+    {
+        OurInterpreter.getSimTable().put(variables[0], Calculator.calc(variables[1]));
+    }
 
     }
-}
+

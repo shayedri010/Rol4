@@ -4,11 +4,7 @@ import java.util.List;
 public class While implements Command{
     private List<Command> commandList;
 
-    @Override
-    public void doCommand(List<String> str)
-    {
 
-    }
 
     public void doCommand(String[] variables)
     {

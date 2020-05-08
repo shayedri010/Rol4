@@ -34,20 +34,14 @@ public class OurInterpreter {
     };*/
     Lexer lexer;
     Parser parser;
-    static ConcurrentHashMap<String, Double> simTable = new ConcurrentHashMap<String, Double>();
+
 
     public OurInterpreter(){
         Lexer lexer = new Lexer();
         Parser parser = new Parser();
     }
 
-    public Double getVarValue(String key){
-        Double val =simTable.get(key);
-        return val;
-    }
 
-    public static ConcurrentHashMap<String,Double> getSimTable(){
-        return simTable;
-    }
+
 
 }
